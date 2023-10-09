@@ -1,0 +1,17 @@
+{
+    "tiers": 300,
+    "Constant":120,
+    "Wordpress" : "runonflux/wp-nginx:latest",
+    "Presearch" : "presearch/node:latest",
+    "Kadena" : "runonflux/kadena-chainweb-node:latest",
+    "getFluxNodes":"https://explorer.runonflux.io/api/status?q=getFluxNodes",
+    "getOverviewTotal":"https://api.runonflux.io/daemon/getzelnodecount",
+    "getOverviewRateData":"https://explorer.runonflux.io/api/currency",
+    "getbenchmarkData":"https://stats.runonflux.io/fluxinfo?projection=benchmark.info,benchmark.bench.ipaddress,benchmark.bench.thunder,benchmark.bench.cores,benchmark.bench.real_cores,benchmark.bench.ram,benchmark.bench.ssd,benchmark.bench.hdd,benchmark.bench.eps,benchmark.bench.disksinfo,benchmark.bench.upload_speed,benchmark.bench.download_speed,benchmark.bench.disksinfo",
+    "getnodeData":"https://stats.runonflux.io/fluxinfo?projection=node,apps.runningapps.Image",
+    "benchmarkinfo":"https://raw.githubusercontent.com/RunOnFlux/flux/master/helpers/benchmarkinfo.json",
+    "fluxinfo":"https://raw.githubusercontent.com/RunOnFlux/flux/master/package.json",
+    "fluxProjection":"https://stats.runonflux.io/fluxinfo?projection=flux.ip,flux.zelid,flux.version",
+    "BlockHeight":"https://api.runonflux.io/daemon/getinfo"
+}
+  
