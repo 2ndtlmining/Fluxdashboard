@@ -1,37 +1,139 @@
-<p>Overview</p>
- Total Cumulus:-  <span *ngIf="this.OverviewData != undefined">{{this.getCUMULUS()}}</span><br/>
- Total Nimbus:- <span *ngIf="this.OverviewData != undefined">{{this.getNIMBUS()}}</span><br/>
-Total Stratus:- <span *ngIf="this.OverviewData != undefined">{{this.getSTRATUS()}}</span><br/>
-Total Fractus:- <span *ngIf="this.ResourcesData != undefined">{{this.getthunder()}}</span><br/>
-Total Nodes:- <span *ngIf="this.OverviewData != undefined">{{this.getTotalNodes()}}</span><br/>
-% Flux Network:- <span *ngIf="this.OverviewData != undefined">{{this.FluxNetwork()}}</span><br/>
-Apps hosted:- <span *ngIf="this.NodeProjection != undefined">{{this.getAppHosted()}}</span><br/>
-AuM:- <span *ngIf="this.OverviewData != undefined && this.Rate > 0">{{this.AssetUnderManagement()}}</span><br/>
-<p><b>Resources</b></p>
-Total vCores:-<span *ngIf="this.ResourcesData != undefined">{{this.getvCores()}}</span><br/>
-Total Cores:-<span *ngIf="this.ResourcesData != undefined">{{this.getCores()}}</span><br/>
-Total Ram:-<span *ngIf="this.ResourcesData != undefined">{{this.getRam()}}</span><br/>
-Total SSD:-<span *ngIf="this.ResourcesData != undefined">{{this.getSSD()}}</span><br/>
-Total HDD:-<span *ngIf="this.ResourcesData != undefined">{{this.getHDD()}}</span><br/>
+<div class="grid">
+  <div class="left">
+    <h1>Dashbaord</h1>
+    <br />
+    <p><b>Overview</b></p>
+    Total Cumulus:-
+    <span *ngIf="this.OverviewData != undefined">{{ this.getCUMULUS() }}</span
+    ><br />
+    Total Nimbus:-
+    <span *ngIf="this.OverviewData != undefined">{{ this.getNIMBUS() }}</span
+    ><br />
+    Total Stratus:-
+    <span *ngIf="this.OverviewData != undefined">{{ this.getSTRATUS() }}</span
+    ><br />
+    Total Fractus:-
+    <span *ngIf="this.ResourcesData != undefined">{{ this.getthunder() }}</span
+    ><br />
+    Total Nodes:-
+    <span *ngIf="this.OverviewData != undefined">{{
+      this.getTotalNodes()
+    }}</span
+    ><br />
+    % Flux Network:-
+    <span *ngIf="this.OverviewData != undefined">{{ this.FluxNetwork() }}</span
+    ><br />
+    Apps hosted:-
+    <span *ngIf="this.NodeProjection != undefined">{{
+      this.getAppHosted()
+    }}</span
+    ><br />
+    AuM:-
+    <span *ngIf="this.OverviewData != undefined && this.Rate > 0">{{
+      this.AssetUnderManagement()
+    }}</span
+    ><br />
+    <p><b>Resources</b></p>
+    Total vCores:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getvCores()
+    }}</span
+    ><br />
+    Total Cores:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getCores()
+    }}</span
+    ><br />
+    Total Ram:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getRam()
+    }}</span
+    ><br />
+    Total SSD:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getSSD()
+    }}</span
+    ><br />
+    Total HDD:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getHDD()
+    }}</span
+    ><br />
 
-<p><b>Notable Hosted Apps</b></p>
-Wordpress:-<span *ngIf="this.NodeImageProjection != undefined">{{this.getWordPress()}}</span><br/>
-Presearch:-<span *ngIf="this.NodeImageProjection != undefined">{{this.getPresearch()}}</span><br/>
-Kadena:-<span *ngIf="this.NodeImageProjection != undefined">{{this.getKadena()}}</span><br/>
-Other:-<span *ngIf="this.NodeImageProjection != undefined">{{this.getOther()}}</span><br/>
-Flux Price:-<span *ngIf="this.Rate != undefined">{{this.getFluxPrice()}}</span><br/>
-Customers:-<span *ngIf="this.FluxProjection != undefined">{{this.getCustomersCount()}}</span><br/>
+    <p><b>Notable Hosted Apps</b></p>
+    Wordpress:-<span *ngIf="this.NodeImageProjection != undefined">{{
+      this.getWordPress()
+    }}</span
+    ><br />
+    Presearch:-<span *ngIf="this.NodeImageProjection != undefined">{{
+      this.getPresearch()
+    }}</span
+    ><br />
+    Kadena:-<span *ngIf="this.NodeImageProjection != undefined">{{
+      this.getKadena()
+    }}</span
+    ><br />
+    Other:-<span *ngIf="this.NodeImageProjection != undefined">{{
+      this.getOther()
+    }}</span
+    ><br />
+    Flux Price:-<span *ngIf="this.Rate != undefined">{{
+      this.getFluxPrice()
+    }}</span
+    ><br />
+    Customers:-<span *ngIf="this.FluxProjection != undefined">{{
+      this.getCustomersCount()
+    }}</span
+    ><br />
 
-<p><b>Attention Area: X Nodes</b></p>
-Closed Maintenance Window:-<span *ngIf="this.FluxProjection != undefined">{{this.getClosedMaintenanceWindow()}}</span><br/>
-Outdated Flux OS:-<span *ngIf="this.FluxProjection != undefined">{{this.getfluxLatestVersionCount()}}</span><br/>
-Outdated Benchmarked:-<span *ngIf="this.NodeProjection != undefined">{{this.getBenchmarkLatestVersionCount()}}</span><br/>
-Busy Benching/Unknown:-<span *ngIf="this.NodeProjection != undefined">{{this.getNotConfirmedStatusCount()}}</span><br/>
-Failed EPS:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedEPSCount()}}</span><br/>
-Failed DWS:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedDWSCount()}}</span><br/>
-Failed Upload:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedUploadCount()}}</span><br/>
-Failed Download:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedDownloadCount()}}</span><br/>
-Failed Ram:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedRamCount()}}</span><br/>
-Failed Size:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedSizeCount()}}</span><br/>
-Failed Cores:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedRealCoresCount()}}</span><br/>
-Failed Threads:-<span *ngIf="this.ResourcesData != undefined">{{this.getFailedCoresCount()}}</span><br/>
+    <p><b>Attention Area: X Nodes</b></p>
+    Closed Maintenance Window:-<span *ngIf="this.FluxProjection != undefined">{{
+      this.getClosedMaintenanceWindow()
+    }}</span
+    ><br />
+    Outdated Flux OS:-<span *ngIf="this.FluxProjection != undefined">{{
+      this.getfluxLatestVersionCount()
+    }}</span
+    ><br />
+    Outdated Benchmarked:-<span *ngIf="this.NodeProjection != undefined">{{
+      this.getBenchmarkLatestVersionCount()
+    }}</span
+    ><br />
+    Busy Benching/Unknown:-<span *ngIf="this.NodeProjection != undefined">{{
+      this.getNotConfirmedStatusCount()
+    }}</span
+    ><br />
+    Failed EPS:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedEPSCount()
+    }}</span
+    ><br />
+    Failed DWS:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedDWSCount()
+    }}</span
+    ><br />
+    Failed Upload:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedUploadCount()
+    }}</span
+    ><br />
+    Failed Download:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedDownloadCount()
+    }}</span
+    ><br />
+    Failed Ram:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedRamCount()
+    }}</span
+    ><br />
+    Failed Size:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedSizeCount()
+    }}</span
+    ><br />
+    Failed Cores:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedRealCoresCount()
+    }}</span
+    ><br />
+    Failed Threads:-<span *ngIf="this.ResourcesData != undefined">{{
+      this.getFailedCoresCount()
+    }}</span
+    ><br />
+  </div>
+  <div class="right">
+    <h1>IPs</h1>
+    <br />
+    <p *ngFor="let ip of ipValues">{{ ip }}</p>
+  </div>
+</div>
