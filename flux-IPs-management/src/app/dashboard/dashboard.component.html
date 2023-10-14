@@ -80,6 +80,11 @@
       this.getCustomersCount()
     }}</span
     ><br />
+    Total Unique Payment Addresses/Wallets:-
+    <span *ngIf="this.OverviewData != undefined">{{
+      this.getPaymentAddressCount()
+    }}</span
+    ><br />
 
     <p><b>Attention Area: X Nodes</b></p>
     Closed Maintenance Window:-<span *ngIf="this.FluxProjection != undefined">{{
